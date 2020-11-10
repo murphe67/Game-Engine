@@ -10,7 +10,6 @@ int main(int argc, char** argv)
 	GE_CORE_WARN("Initialised Log!");
 	GE_INFO("Hello!");
 
-	printf("Game Engine Start");
 	auto app = GEngine::CreateApplication();
 	app->Run();
 	delete app;

@@ -1,4 +1,4 @@
-#include "GEngine/Application.h"
+#include "Application.h"
 
 namespace GEngine {
 
