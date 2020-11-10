@@ -1,0 +1,7 @@
+Game Engine Series from the Cherno on youtube.
+
+Learning how to use OpenGL to make real time rendering applications.
+Started 9/11/2020
+
+Github of original developer:
+https://github.com/TheCherno/Hazel
