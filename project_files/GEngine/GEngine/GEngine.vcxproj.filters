@@ -4,6 +4,9 @@
     <Filter Include="GEngine">
       <UniqueIdentifier>{023A1B06-6E19-9AA1-7731-2578E38F0003}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GEngine\Events">
+      <UniqueIdentifier>{A64FEF47-921D-E34D-7BB1-5374671EBFB2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GEngine.h" />
@@ -16,9 +19,15 @@
     <ClInclude Include="src\GEngine\EntryPoint.h">
       <Filter>GEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEngine\Events\Event.h">
+      <Filter>GEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\GEngine\Log.h">
       <Filter>GEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\GEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\GEngine\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GEngine\Application.cpp">
