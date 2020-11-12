@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
 	GEngine::Log::Init();
 
-	auto app = GEngine::CreateApplication();
+	auto app = GEngine::CreateApplication(); 
 	app->Run();
 	delete app;
 }

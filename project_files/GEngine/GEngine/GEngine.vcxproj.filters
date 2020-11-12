@@ -19,15 +19,26 @@
     <ClInclude Include="src\GEngine\EntryPoint.h">
       <Filter>GEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEngine\Events\ApplicationEvent.h">
+      <Filter>GEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\GEngine\Events\Event.h">
+      <Filter>GEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEngine\Events\KeyEvent.h">
+      <Filter>GEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEngine\Events\MouseEvent.h">
       <Filter>GEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\GEngine\Log.h">
       <Filter>GEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\GEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\GEngine\Events\MouseEvent.h" />
-    <ClInclude Include="src\GEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\GEngine\Window.h">
+      <Filter>GEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gepch.h" />
+    <ClInclude Include="src\Platform\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GEngine\Application.cpp">
@@ -36,5 +47,7 @@
     <ClCompile Include="src\GEngine\Log.cpp">
       <Filter>GEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\gepch.cpp" />
+    <ClCompile Include="src\Platform\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

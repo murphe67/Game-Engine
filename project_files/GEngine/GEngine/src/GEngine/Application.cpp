@@ -1,3 +1,5 @@
+#include "gepch.h"
+
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
 #include "Log.h"
@@ -6,6 +8,7 @@ namespace GEngine {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -14,9 +17,10 @@ namespace GEngine {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		GE_TRACE(e);
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 
 }

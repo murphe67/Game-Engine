@@ -12,6 +12,11 @@ startproject "Sandbox"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "vendor/GLFW/include"
+
+include "vendor/GLFW"
+
 project "GEngine"
 	location "GEngine"
 	kind "SharedLib"
@@ -19,6 +24,9 @@ project "GEngine"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "gepch.h"
+	pchsource "GEngine/src/gepch.cpp"
 
 	files
 	{
@@ -29,7 +37,14 @@ project "GEngine"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW", 
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
