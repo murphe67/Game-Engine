@@ -10,7 +10,8 @@ public:
 
 	void OnUpdate() override
 	{
-		GE_INFO("ExampleLa
+		GE_INFO("ExampleLayer::Update");
+	}
 
 	void OnEvent(GEngine::Event& event) override
 	{
