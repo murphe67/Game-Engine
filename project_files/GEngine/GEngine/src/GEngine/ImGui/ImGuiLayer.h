@@ -4,7 +4,7 @@
 
 namespace GEngine
 {
-	class ImGuiLayer : public Layer
+	class GENGINE_API ImGuiLayer : public Layer
 	{
 	public:
 		ImGuiLayer();
@@ -15,5 +15,7 @@ namespace GEngine
 		void OnDetach();
 		void OnUpdate();
 		void OnEvent();
+	private:
+		float m_Time = 0.0f;
 	};
 }

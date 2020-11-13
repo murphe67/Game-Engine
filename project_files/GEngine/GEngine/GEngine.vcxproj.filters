@@ -7,8 +7,17 @@
     <Filter Include="GEngine\Events">
       <UniqueIdentifier>{A64FEF47-921D-E34D-7BB1-5374671EBFB2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GEngine\ImGui">
+      <UniqueIdentifier>{ACA81BAD-1869-97E3-E1A3-E0604D23DCBF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +43,9 @@
     <ClInclude Include="src\GEngine\Events\MouseEvent.h">
       <Filter>GEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEngine\ImGui\ImGuiLayer.h">
+      <Filter>GEngine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\GEngine\Layer.h">
       <Filter>GEngine</Filter>
     </ClInclude>
@@ -46,16 +58,20 @@
     <ClInclude Include="src\GEngine\Window.h">
       <Filter>GEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\gepch.h" />
-    <ClInclude Include="src\GEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <Filter>Platform</Filter>
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h">
+      <Filter>Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GEngine\Application.cpp">
       <Filter>GEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>GEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\GEngine\Layer.cpp">
       <Filter>GEngine</Filter>
@@ -66,11 +82,12 @@
     <ClCompile Include="src\GEngine\Log.cpp">
       <Filter>GEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\gepch.cpp" />
-    <ClCompile Include="src\GEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>Platform</Filter>
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gepch.cpp" />
   </ItemGroup>
 </Project>
