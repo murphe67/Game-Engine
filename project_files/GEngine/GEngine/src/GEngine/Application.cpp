@@ -2,6 +2,7 @@
 
 #include "Application.h"
 #include "Log.h"
+#include "GEngine/Input.h"
 
 namespace GEngine {
 

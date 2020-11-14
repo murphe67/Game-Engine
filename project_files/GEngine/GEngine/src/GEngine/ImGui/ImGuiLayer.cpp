@@ -161,12 +161,6 @@ namespace GEngine
 
 		return false;
 	}
-	/*
-	bool ImGuiLayer::OnKeyTypedEvent(MouseButtonPressedEvent& e)
-	{
-		return false;
-	}
-	*/
 
 	bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& e)
 	{
