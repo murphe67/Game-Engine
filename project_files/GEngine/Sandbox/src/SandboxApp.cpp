@@ -1,5 +1,7 @@
 #include <GEngine.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public GEngine::Layer
 {
 public:
@@ -10,9 +12,15 @@ public:
 
 	void OnUpdate() override
 	{
-
 		if (GEngine::Input::IsKeyPressed(GE_KEY_TAB))
 			GE_TRACE("Tab key is pressed");
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello world");
+		ImGui::End();
 	}
 
 	void OnEvent(GEngine::Event& event) override
@@ -31,7 +39,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new GEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

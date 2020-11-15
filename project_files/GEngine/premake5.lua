@@ -13,13 +13,14 @@ startproject "Sandbox"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
-IncludeDir["GLFW"] = "vendor/GLFW/include"
-IncludeDir["GLad"] = "vendor/GLad/include"
-IncludeDir["ImGui"] = "vendor/imgui"
+IncludeDir["GLFW"] = "GEngine/vendor/GLFW/include"
+IncludeDir["GLad"] = "GEngine/vendor/GLad/include"
+IncludeDir["ImGui"] = "GEngine/vendor/imgui"
+IncludeDir["glm"] = "GEngine/vendor/glm"
 
-include "vendor/GLFW"
-include "vendor/GLad"
-include "vendor/imgui"
+include "GEngine/vendor/GLFW"
+include "GEngine/vendor/GLad"
+include "GEngine/vendor/imgui"
 
 project "GEngine"
 	location "GEngine"
@@ -35,7 +36,9 @@ project "GEngine"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -44,7 +47,8 @@ project "GEngine"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -101,7 +105,9 @@ project "Sandbox"
 	includedirs
 	{
 		"GEngine/vendor/spdlog/include",
-		"GEngine/src"
+		"GEngine/src",
+		"GEngine/vendor",
+		"%{IncludeDir.glm}"
 	}
 
 	links

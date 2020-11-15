@@ -1,9 +1,12 @@
-[submodule "project_file/GEngine/vendor/spdlog"]
-	path = project_files/GEngine/vendor/spdlog
+[submodule "project_files/GEngine/GEngine/vendor/spdlog"]
+	path = project_files/GEngine/GEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "project_files/GEngine/vendor/glfw"]
-	path = project_files/GEngine/vendor/glfw
+[submodule "project_files/GEngine/GEngine/vendor/glfw"]
+	path = project_files/GEngine/GEngine/vendor/glfw
 	url = https://github.com/TheCherno/glfw
-[submodule "project_files/GEngine/vendor/imgui"]
-	path = project_files/GEngine/vendor/imgui
+[submodule "project_files/GEngine/GEngine/vendor/imgui"]
+	path = project_files/GEngine/GEngine/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "project_files/GEngine/GEngine/vendor/glm"]
+	path = project_files/GEngine/GEngine/vendor/glm
+	url = https://github.com/g-truc/glm
